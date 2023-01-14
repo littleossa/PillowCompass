@@ -8,7 +8,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @StateObject private var pillowCompass = PillowCompass()
+    @StateObject private var viewModel = LilOssaCompassViewModel()
     
     var body: some View {
         
@@ -24,12 +24,12 @@ struct ContentView: View {
                 .overlay {
                     Image(systemName: "figure.stand")
                         .font(.system(size: 200))
-                        .rotationEffect(.degrees(pillowCompass.pillowDegrees ?? 0))
+                        .rotationEffect(.degrees(viewModel.pillowDegrees ?? 0))
                 }
             
             Button {
                 Task {
-                    await pillowCompass.fetchPillowDegrees()
+                    await viewModel.fetchPillowDegrees()
                 }
             } label: {
                 RoundedRectangle(cornerRadius: 40)
@@ -42,7 +42,7 @@ struct ContentView: View {
             }
         }
         .task {
-            await pillowCompass.setup()
+            await viewModel.setup()
         }
     }
 }

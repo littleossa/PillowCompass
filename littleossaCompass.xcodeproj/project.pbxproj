@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9741A9F0296C526F006091C8 /* PillowCompass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9741A9EF296C526F006091C8 /* PillowCompass.swift */; };
+		9741A9F0296C526F006091C8 /* LilOssaCompassViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9741A9EF296C526F006091C8 /* LilOssaCompassViewModel.swift */; };
 		9741A9F2296C52BD006091C8 /* CLLocationDegrees+radian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9741A9F1296C52BD006091C8 /* CLLocationDegrees+radian.swift */; };
 		9741A9F4296C533D006091C8 /* LilossaCoordinateAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9741A9F3296C533D006091C8 /* LilossaCoordinateAPI.swift */; };
 		9741A9F6296C536C006091C8 /* LilossaCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9741A9F5296C536C006091C8 /* LilossaCoordinate.swift */; };
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9741A9EF296C526F006091C8 /* PillowCompass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillowCompass.swift; sourceTree = "<group>"; };
+		9741A9EF296C526F006091C8 /* LilOssaCompassViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LilOssaCompassViewModel.swift; sourceTree = "<group>"; };
 		9741A9F1296C52BD006091C8 /* CLLocationDegrees+radian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationDegrees+radian.swift"; sourceTree = "<group>"; };
 		9741A9F3296C533D006091C8 /* LilossaCoordinateAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LilossaCoordinateAPI.swift; sourceTree = "<group>"; };
 		9741A9F5296C536C006091C8 /* LilossaCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LilossaCoordinate.swift; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				9741A9F5296C536C006091C8 /* LilossaCoordinate.swift */,
-				9741A9EF296C526F006091C8 /* PillowCompass.swift */,
+				9741A9EF296C526F006091C8 /* LilOssaCompassViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,7 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97E581B4296A2B97002B8545 /* ContentView.swift in Sources */,
-				9741A9F0296C526F006091C8 /* PillowCompass.swift in Sources */,
+				9741A9F0296C526F006091C8 /* LilOssaCompassViewModel.swift in Sources */,
 				97E581B2296A2B97002B8545 /* littleossaCompassApp.swift in Sources */,
 				9741A9F4296C533D006091C8 /* LilossaCoordinateAPI.swift in Sources */,
 				9741A9F2296C52BD006091C8 /* CLLocationDegrees+radian.swift in Sources */,

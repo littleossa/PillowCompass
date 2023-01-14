@@ -1,5 +1,5 @@
 //
-//  PillowCompass.swift
+//  LilOssaCompassViewModel.swift
 //  littleossaCompass
 //
 //
@@ -7,7 +7,7 @@
 import SwiftUI
 import CoreLocation
 
-class PillowCompass: NSObject, ObservableObject {
+class LilOssaCompassViewModel: NSObject, ObservableObject {
     
     @Published var pillowDegrees: Double?
     
@@ -72,7 +72,7 @@ class PillowCompass: NSObject, ObservableObject {
 }
 
 // MARK: - CLLocation Manager
-extension PillowCompass: CLLocationManagerDelegate {
+extension LilOssaCompassViewModel: CLLocationManagerDelegate {
         
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
