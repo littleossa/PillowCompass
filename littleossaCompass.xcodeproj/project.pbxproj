@@ -61,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				9741A9F5296C536C006091C8 /* LilossaCoordinate.swift */,
-				9741A9EF296C526F006091C8 /* LilOssaCompassViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -72,6 +71,14 @@
 				9741A9F1296C52BD006091C8 /* CLLocationDegrees+radian.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		974BE39029735BB500329D9C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9741A9EF296C526F006091C8 /* LilOssaCompassViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		97E581A5296A2B96002B8545 = {
@@ -98,6 +105,7 @@
 				9741A9F8296C538B006091C8 /* APIClient */,
 				9741A9F9296C5406006091C8 /* Model */,
 				9741A9F7296C537E006091C8 /* View */,
+				974BE39029735BB500329D9C /* ViewModel */,
 				9741A9FA296C5415006091C8 /* Extension */,
 				97E581B5296A2B98002B8545 /* Assets.xcassets */,
 				97E581B7296A2B98002B8545 /* Preview Content */,
