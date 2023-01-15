@@ -29,7 +29,7 @@ struct ContentView: View {
             
             Button {
                 Task {
-                    await viewModel.fetchPillowDegrees()
+                    await viewModel.calculatePillowDegreesWithLatestLilOssaCoordinate()
                 }
             } label: {
                 RoundedRectangle(cornerRadius: 40)

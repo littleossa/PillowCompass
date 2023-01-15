@@ -26,17 +26,9 @@ class LilOssaCompassViewModel: NSObject, ObservableObject {
         locationManager.startUpdatingLocation()
     }
     
-    @MainActor
-    func fetchPillowDegrees() async {
+    func calculatePillowDegreesWithLatestLilOssaCoordinate() async {
         await fetchCurrentLilossaCoordinate()
-        
-        guard let currentOwnerCoordinate,
-              let currentLilossaCoordinate else { return }
-        
-        withAnimation {
-            pillowDegrees = calculatePillowDegreesFrom(currentCoordinate: currentOwnerCoordinate,
-                                                       targetCoordinate: currentLilossaCoordinate)
-        }
+        await calculatePillowDegreesFromCurrentCoordinates()
     }
     
     private func fetchCurrentLilossaCoordinate() async {
@@ -47,6 +39,17 @@ class LilOssaCompassViewModel: NSObject, ObservableObject {
                                                               longitude: coordinate.longitude)
         } catch {
             // Some Error Handling
+        }
+    }
+    
+    @MainActor
+    private func calculatePillowDegreesFromCurrentCoordinates() {
+        guard let currentOwnerCoordinate,
+              let currentLilossaCoordinate else { return }
+        
+        withAnimation {
+            pillowDegrees = calculatePillowDegreesFrom(currentCoordinate: currentOwnerCoordinate,
+                                                       targetCoordinate: currentLilossaCoordinate)
         }
     }
     
@@ -73,15 +76,14 @@ class LilOssaCompassViewModel: NSObject, ObservableObject {
 
 // MARK: - CLLocation Manager
 extension LilOssaCompassViewModel: CLLocationManagerDelegate {
-        
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         guard let currentLocation = locations.last else { return }
         currentOwnerCoordinate = currentLocation.coordinate
         
-        Task {
-            await fetchPillowDegrees()
+        Task { @MainActor in
+            calculatePillowDegreesFromCurrentCoordinates()
         }
     }
 }
-
